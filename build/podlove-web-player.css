@@ -12,13 +12,13 @@
 @font-face {
   font-family: pwpfont;
   text-rendering: optimizeLegibility;
-  src: url("../font/podlovefont.eot?45650229");
+  src: url("../podlove-web-player/font/podlovefont.eot?45650229");
   src: local('☺'),
-       url("../font/podlovefont.eot?45650229#iefix") format('embedded-opentype'),
-       url("../font/podlovefont.woff?45650229") format('woff'),
-       url("../font/podlovefont.ttf?45650229") format('truetype'),
-       url("../font/podlovefont.otf?45650229") format('opentype'),
-       url("../font/podlovefont.svg?45650229#pwpfont") format('svg');
+       url("../podlove-web-player/font/podlovefont.eot?45650229#iefix") format('embedded-opentype'),
+       url("../podlove-web-player/font/podlovefont.woff?45650229") format('woff'),
+       url("../podlove-web-player/font/podlovefont.ttf?45650229") format('truetype'),
+       url("../podlove-web-player/font/podlovefont.otf?45650229") format('opentype'),
+       url("../podlove-web-player/font/podlovefont.svg?45650229#pwpfont") format('svg');
   font-weight: normal !important;
   font-style: normal !important;
 }
@@ -202,7 +202,7 @@
 	margin: -50px 0 0 -50px;
 	background: url(bigplay.svg) no-repeat;
 }
-.no-svg .mejs-overlay-button { 
+.no-svg .mejs-overlay-button {
 	background-image: url(bigplay.png);
 }
 .mejs-overlay:hover .mejs-overlay-button {
@@ -246,11 +246,11 @@
 	background: url(background.png);
 	background: rgba(0, 0, 0, 0.7);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(50,50,50,0.7)), to(rgba(0,0,0,0.7)));
-	background: -webkit-linear-gradient(top, rgba(50,50,50,0.7), rgba(0,0,0,0.7)); 
+	background: -webkit-linear-gradient(top, rgba(50,50,50,0.7), rgba(0,0,0,0.7));
 	background: -moz-linear-gradient(top, rgba(50,50,50,0.7), rgba(0,0,0,0.7));
-	background: -o-linear-gradient(top, rgba(50,50,50,0.7), rgba(0,0,0,0.7)); 
-	background: -ms-linear-gradient(top, rgba(50,50,50,0.7), rgba(0,0,0,0.7)); 	
-	background: linear-gradient(rgba(50,50,50,0.7), rgba(0,0,0,0.7)); 	
+	background: -o-linear-gradient(top, rgba(50,50,50,0.7), rgba(0,0,0,0.7));
+	background: -ms-linear-gradient(top, rgba(50,50,50,0.7), rgba(0,0,0,0.7));
+	background: linear-gradient(rgba(50,50,50,0.7), rgba(0,0,0,0.7));
 	height: 30px;
 	width: 100%;
 }
@@ -285,7 +285,7 @@
 	background: transparent url(controls.svg) no-repeat;
 }
 
-.no-svg .mejs-controls .mejs-button button { 
+.no-svg .mejs-controls .mejs-button button {
 	background-image: url(controls.png);
 }
 
@@ -358,7 +358,7 @@
 	background: #333;
 	background: rgba(50,50,50,0.8);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(30,30,30,0.8)), to(rgba(60,60,60,0.8)));
-	background: -webkit-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8)); 
+	background: -webkit-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 	background: -moz-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 	background: -o-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 	background: -ms-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
@@ -392,7 +392,7 @@
 .mejs-controls .mejs-time-rail .mejs-time-loaded {
 	background: #3caac8;
 	background: rgba(60,170,200,0.8);
-	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(44,124,145,0.8)), to(rgba(78,183,212,0.8))); 
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(44,124,145,0.8)), to(rgba(78,183,212,0.8)));
 	background: -webkit-linear-gradient(top, rgba(44,124,145,0.8), rgba(78,183,212,0.8));
 	background: -moz-linear-gradient(top, rgba(44,124,145,0.8), rgba(78,183,212,0.8));
 	background: -o-linear-gradient(top, rgba(44,124,145,0.8), rgba(78,183,212,0.8));
@@ -406,7 +406,7 @@
 	background: rgba(255,255,255,0.8);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.9)), to(rgba(200,200,200,0.8)));
 	background: -webkit-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8));
-	background: -moz-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8)); 
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8));
 	background: -o-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8));
 	background: -ms-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8));
 	background: linear-gradient(rgba(255,255,255,0.9), rgba(200,200,200,0.8));
@@ -591,15 +591,15 @@
 	margin: 0;
 	padding: 0;
 	font-size: 1px;
-	
+
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
-	border-radius: 2px;	
+	border-radius: 2px;
 
 	background: #333;
 	background: rgba(50,50,50,0.8);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(30,30,30,0.8)), to(rgba(60,60,60,0.8)));
-	background: -webkit-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8)); 
+	background: -webkit-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 	background: -moz-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 	background: -o-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
 	background: -ms-linear-gradient(top, rgba(30,30,30,0.8), rgba(60,60,60,0.8));
@@ -625,7 +625,7 @@
 	background: rgba(255,255,255,0.8);
 	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgba(255,255,255,0.9)), to(rgba(200,200,200,0.8)));
 	background: -webkit-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8));
-	background: -moz-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8)); 
+	background: -moz-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8));
 	background: -o-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8));
 	background: -ms-linear-gradient(top, rgba(255,255,255,0.9), rgba(200,200,200,0.8));
 	background: linear-gradient(rgba(255,255,255,0.9), rgba(200,200,200,0.8));
@@ -725,8 +725,8 @@
 	background: -moz-linear-gradient(top, rgba(50,50,50,0.7), rgba(0,0,0,0.7));
 	background: -o-linear-gradient(top, rgba(50,50,50,0.7), rgba(0,0,0,0.7));
 	background: -ms-linear-gradient(top, rgba(50,50,50,0.7), rgba(0,0,0,0.7));
-	background: linear-gradient(rgba(50,50,50,0.7), rgba(0,0,0,0.7)); 
-	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232,endColorstr=#000000);		
+	background: linear-gradient(rgba(50,50,50,0.7), rgba(0,0,0,0.7));
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#323232,endColorstr=#000000);
 	overflow: hidden;
 	border: 0;
 }
@@ -753,7 +753,7 @@
 	background: -o-linear-gradient(top, rgba(102,102,102,0.7), rgba(50,50,50,0.6));
 	background: -ms-linear-gradient(top, rgba(102,102,102,0.7), rgba(50,50,50,0.6));
 	background: linear-gradient(rgba(102,102,102,0.7), rgba(50,50,50,0.6));
-	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666,endColorstr=#323232);		
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, startColorstr=#666666,endColorstr=#323232);
 }
 .mejs-chapters .mejs-chapter .mejs-chapter-block .ch-title {
 	font-size: 12px;
@@ -874,7 +874,7 @@
 	height: 1px;
 	font-size: 0;
 	margin: 5px 6px;
-	background: #333;	
+	background: #333;
 }
 
 .mejs-contextmenu .mejs-contextmenu-item {
@@ -882,7 +882,7 @@
 	font-size: 12px;
 	padding: 4px 6px;
 	cursor: pointer;
-	color: #333;	
+	color: #333;
 }
 .mejs-contextmenu .mejs-contextmenu-item:hover {
 	background: #2C7C91;
@@ -1393,7 +1393,7 @@
 	background: url(bigplay.svg) no-repeat;
 }
 
-.no-svg .mejs-overlay-button { 
+.no-svg .mejs-overlay-button {
 	background-image: url(bigplay.png);
 }
 
@@ -1677,9 +1677,9 @@
 
 .podlovewebplayer_chapters tr.chaptertr:active {
 	color: #ffffff;
-	-webkit-text-shadow: 0px 0px 3px #111111; 
-	-moz-text-shadow: 0px 0px 3px #111111; 
-	text-shadow: 0px 0px 3px #111111; 
+	-webkit-text-shadow: 0px 0px 3px #111111;
+	-moz-text-shadow: 0px 0px 3px #111111;
+	text-shadow: 0px 0px 3px #111111;
 	background: #ffffff;
 	background: -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed));
@@ -1747,7 +1747,7 @@
 .podlovewebplayer_wrapper.podlovewebplayer_video .podlovewebplayer_tableend,
 .podlovewebplayer_wrapper.podlovewebplayer_video .podlovewebplayer_controlbox,
 .podlovewebplayer_wrapper.podlovewebplayer_video .summary {
-	background: #252525; 
+	background: #252525;
 }
 
 .podlovewebplayer_wrapper.podlovewebplayer_video .podlovewebplayer_chapterbox,
@@ -1778,18 +1778,18 @@
 	padding: 6px 13px 19px 12px;
 }
 
-.podlovewebplayer_smallplayer .bigplay.playing:focus, 
-.podlovewebplayer_smallplayer .bigplay.playing:hover, 
+.podlovewebplayer_smallplayer .bigplay.playing:focus,
+.podlovewebplayer_smallplayer .bigplay.playing:hover,
 .podlovewebplayer_smallplayer .bigplay.playing:active {
 	border: 4px solid white !important;
 }
 
-.podlovewebplayer_smallplayer .podlovewebplayer_top, 
+.podlovewebplayer_smallplayer .podlovewebplayer_top,
 .podlovewebplayer_smallplayer .podlovewebplayer_meta {
 	min-height: 60px;
 }
 
-@media only screen 
+@media only screen
 and (max-width : 500px) {
 	.podlovewebplayer_wrapper {
 		margin-left: 0px;
@@ -1814,15 +1814,15 @@ and (max-width : 500px) {
 		margin: 4%;
 		white-space: nowrap;
 	}
-	
+
 	.podlovewebplayer_wrapper .podlovewebplayer_controlbox.active {
 		height: auto !important;
 	}
-	
+
 	.podlovewebplayer_wrapper .podlovewebplayer_controlbox .infobuttons span {
 		font-size: 13pt;
 	}
-	
+
 	.podlovewebplayer_wrapper .podlovewebplayer_tableend,
 	.podlovewebplayer_wrapper .podlovewebplayer_top {
 		-webkit-border-top-left-radius: 0px;

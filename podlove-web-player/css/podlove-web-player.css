@@ -1,0 +1,42 @@
+.pwp-player {
+  width: 400px;
+  height: 200px;
+  background: #444444;
+  color: #eeeeee;
+  font-size: 16px;
+}
+.pwp-logo,
+.pwp-button-big {
+  width: 50px;
+  height: 50px;
+}
+.pwp-heading h1,
+.pwp-heading h2 {
+  font-family: "LUCIDA GRANDE";
+  font-size: 19.2px;
+}
+.pwp-logo,
+.pwp-time,
+.pwp-timeline,
+.pwp-buttons,
+.pwp-heading {
+  float: left;
+}
+.pwp-heading {
+  width: 300px;
+}
+.pwp-time {
+  width: 50px;
+  font-size: 12.8px;
+}
+.pwp-timeline {
+  width: 200px;
+  background: black;
+  height: 20px;
+}
+.pwp-time-controls {
+  float: right;
+}
+.pwp-meta-controls {
+  float: right;
+}
