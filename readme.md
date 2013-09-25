@@ -24,6 +24,10 @@ After that package your new codebase with
 
     grunt build
 
+Watch for changed styles
+
+    sass --compass --watch sass/podlove-web-player.scss:build/css/pwp.css
+
 ## Info
 
 Contributors: [Gerrit van Aaken](https://github.com/gerritvanaaken/), [Simon Waldherr](https://github.com/simonwaldherr/), [Frank Hase](https://github.com/Kambfhase/), [Eric Teubert](https://github.com/eteubert/) and [others](https://github.com/podlove/podlove-web-player/contributors)  
