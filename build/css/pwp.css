@@ -1,4 +1,52 @@
 @charset "UTF-8";
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400,300&subset=latin,latin-ext");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
 @font-face {
   font-family: pwpfont;
   text-rendering: optimizeLegibility;
@@ -365,36 +413,57 @@
 
 /* '🕔' */
 .pwp-player {
+  overflow: hidden;
+  *zoom: 1;
   width: 590px;
-  height: 170px;
+  min-height: 170px;
   background: #2c2a2a;
   color: #eeeeee;
   font-size: 16px; }
   .pwp-player * {
     box-sizing: content-box;
-    font-family: "Oxygen", sans-serif; }
+    font-family: "Open Sans", sans-serif; }
 
 .pwp-logo {
   width: 100px;
-  height: 100px;
-  border: 1px solid black; }
+  height: 100px; }
+
+.pwp-play {
+  font-family: pwpfont;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1em;
+  speak: none;
+  color: #ffffff;
+  background: transparent;
+  float: left;
+  border: 8px solid white;
+  border-radius: 50px;
+  font-size: 36px;
+  padding: 6px 4px 12px 4px;
+  height: 32px;
+  width: 42px;
+  margin: 17px;
+  -webkit-transition: none 1s;
+  -moz-transition: none 1s;
+  -o-transition: none 1s;
+  transition: none 1s; }
 
 .pwp-heading {
-  padding: 1px 10px;
+  padding: 0px 10px;
   width: 370px;
   min-height: 100px; }
   .pwp-heading h1, .pwp-heading h2 {
-    font-family: "Oxygen", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: 300;
     font-size: 17.6px;
-    line-height: 1.5em;
-    margin: 10px 0; }
+    line-height: 1.25em;
+    margin: 16px 0 8px; }
   .pwp-heading h2 {
     font-size: 13.328px;
     font-weight: 400;
     color: #888888;
-    line-height: 1em;
-    margin: 4px 0; }
+    margin: 0 0 12px 0; }
 
 .pwp-logo,
 .pwp-time,
@@ -409,13 +478,22 @@
   background: black; }
 
 .pwp-time {
-  width: 54px;
-  height: 14px;
-  padding: 8px 20px;
-  font-size: 12.8px; }
+  height: 18px;
+  width: 60px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+  font-size: 12.8px;
+  letter-spacing: 0.1em;
+  line-height: 1.1em; }
+  .pwp-time.pwp-time-elapsed {
+    padding-left: 18px;
+    padding-right: 12px; }
+  .pwp-time.pwp-time-remaining {
+    padding-left: 12px;
+    padding-right: 18px; }
 
 .pwp-progress-bar {
-  width: 400px;
+  width: 410px;
   background: black;
   height: 30px; }
 
@@ -426,7 +504,7 @@
 .pwp-time-controls,
 .pwp-meta-controls {
   list-style-type: none;
-  margin: 8px 16px;
+  margin: 8px 12px;
   /*
   -webkit-margin-before: 0;
   -moz-margin-before: 0;
@@ -520,7 +598,7 @@
   background: -webkit-linear-gradient(top, white 0%, #f2f2f2 100%);
   background: -o-linear-gradient(top, white 0%, #f2f2f2 100%);
   background: -ms-linear-gradient(top, white 0%, #f2f2f2 100%);
-  background: linear-gradient(to bottom, white 0%, #f2f2f2 100%); }
+  background: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%); }
 
 .podlovewebplayer_wrapper .podlovewebplayer_chapters tr:hover {
   background: -moz-linear-gradient(top, #efefef 0%, #d2d2d2 100%);
@@ -625,7 +703,7 @@
 .mejs-button.mejs-volume-button.mejs-mute button::after {
   content: "\1f50a"; }
 
-.bigplay, .pwp-play {
+.bigplay {
   font-family: "pwpfont" !important;
   font-style: normal;
   font-weight: normal;
@@ -648,15 +726,13 @@
   -o-transition: none;
   transition: none; }
 
-.bigplay:before, .pwp-play:before {
+.bigplay:before {
   content: "\25b6";
   padding-left: 0.02em; }
 
-.podlovewebplayer_meta .bigplay:focus, .podlovewebplayer_meta .pwp-play:focus,
+.podlovewebplayer_meta .bigplay:focus,
 .podlovewebplayer_meta .bigplay:hover,
-.podlovewebplayer_meta .pwp-play:hover,
-.podlovewebplayer_meta .bigplay:active,
-.podlovewebplayer_meta .pwp-play:active {
+.podlovewebplayer_meta .bigplay:active {
   border: 5px solid white !important;
   border-radius: 60px !important;
   -webkit-text-shadow: 0px 0px 10px #FFFFFF;
@@ -664,17 +740,15 @@
   -o-text-shadow: 0px 0px 10px #FFFFFF;
   text-shadow: 0px 0px 10px #FFFFFF; }
 
-.podlovewebplayer_meta .bigplay.playing:before, .podlovewebplayer_meta .playing.pwp-play:before {
+.podlovewebplayer_meta .bigplay.playing:before {
   content: "\2389"; }
 
-.podlovewebplayer_meta .bigplay.playing, .podlovewebplayer_meta .playing.pwp-play {
+.podlovewebplayer_meta .bigplay.playing {
   padding: 5px 11px 20px 14px; }
 
-.podlovewebplayer_meta .bigplay.playing:focus, .podlovewebplayer_meta .playing.pwp-play:focus,
+.podlovewebplayer_meta .bigplay.playing:focus,
 .podlovewebplayer_meta .bigplay.playing:hover,
-.podlovewebplayer_meta .playing.pwp-play:hover,
-.podlovewebplayer_meta .bigplay.playing:active,
-.podlovewebplayer_meta .playing.pwp-play:active {
+.podlovewebplayer_meta .bigplay.playing:active {
   border: 5px solid white !important;
   border-radius: 60px !important;
   -webkit-text-shadow: 0px 0px 10px #FFFFFF;
@@ -1053,7 +1127,7 @@
   background: -webkit-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
   background: -o-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
   background: -ms-linear-gradient(top, white 0%, #f6f6f6 47%, #ededed 100%);
-  background: linear-gradient(to bottom, white 0%, #f6f6f6 47%, #ededed 100%);
+  background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); }
 
 .podlovewebplayer_chapters td b {
@@ -1120,7 +1194,7 @@
 .podlovewebplayer_smallplayer .mejs-controls .mejs-time-rail .mejs-time-float {
   z-index: 100; }
 
-.podlovewebplayer_smallplayer .podlovewebplayer_meta .bigplay, .podlovewebplayer_smallplayer .podlovewebplayer_meta .pwp-play {
+.podlovewebplayer_smallplayer .podlovewebplayer_meta .bigplay {
   font-size: 25px;
   padding: 6px 11px 19px 14px;
   height: 20px;
@@ -1128,14 +1202,12 @@
   margin: 10px 10px 0px 10px;
   border: 4px solid #ffffff !important; }
 
-.podlovewebplayer_smallplayer .podlovewebplayer_meta .bigplay.playing, .podlovewebplayer_smallplayer .podlovewebplayer_meta .playing.pwp-play {
+.podlovewebplayer_smallplayer .podlovewebplayer_meta .bigplay.playing {
   padding: 6px 13px 19px 12px; }
 
-.podlovewebplayer_smallplayer .bigplay.playing:focus, .podlovewebplayer_smallplayer .playing.pwp-play:focus,
+.podlovewebplayer_smallplayer .bigplay.playing:focus,
 .podlovewebplayer_smallplayer .bigplay.playing:hover,
-.podlovewebplayer_smallplayer .playing.pwp-play:hover,
-.podlovewebplayer_smallplayer .bigplay.playing:active,
-.podlovewebplayer_smallplayer .playing.pwp-play:active {
+.podlovewebplayer_smallplayer .bigplay.playing:active {
   border: 4px solid white !important; }
 
 .podlovewebplayer_smallplayer .podlovewebplayer_top,

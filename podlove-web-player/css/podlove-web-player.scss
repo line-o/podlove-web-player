@@ -1,132 +1,18 @@
-$width: 590px;
-$height: 170px;
-$font-size: 16px;
-
-$black: #000;
-$dark: #2C2A2A;
-$darker: #888;
-$white: #EEEEEE;
-
-$gFont:Oxygen;
-$weights:400,300;
-$sets: latin,latin-ext;
-
-$fontFamily: 'Oxygen', sans-serif;
-
-$headingWidth: 390;
-$logoSize: 100px;
-
-
+@import "compass";
+@import "compass/reset";
+@import "settings.scss";
 @import "pwpfont.scss";
 
 @mixin googlefont ($fontname, $weights, $subset) {
-  @import url('http://fonts.googleapis.com/css?family=$fontname:$weights&subset=$subset');
+  @import url('http://fonts.googleapis.com/css?family=' + $fontname + ':' + $weights + '&subset=' + $subset);
 }
 
-.pwp-player {
-  & * {
-    box-sizing: content-box;
-    font-family: $fontFamily;
-  }
-  width: $width;
-  height: $height;
-  background: $dark;
-  color: $white;
-  font-size: $font-size;
-}
+@include googlefont($gFont, $weights, $sets);
 
-.pwp-logo {
-  width: $logoSize;
-  height: $logoSize;
-  border: 1px solid $black;
-}
-.pwp-play {
-  @extend .bigplay;
-}
-
-.pwp-heading {
-  $padding: 10px;
-  padding: 1px $padding; // 1px is the borderwidth of the logo
-  width: $headingWidth - $padding * 2;
-  min-height: $logoSize;
-  h1, h2 {
-    font-family: $fontFamily;
-    font-weight: 300;
-    font-size: $font-size * 1.1;
-    line-height: 1.5em;
-    margin: 10px 0;
-  }
-  h2 {
-    font-size: $font-size * 0.833;
-    font-weight: 400;
-    color: $darker;
-    line-height: 1em;
-    margin: 4px 0;
-  }
-}
-
-.pwp-logo,
-.pwp-time,
-.pwp-progress-bar,
-.pwp-buttons,
-.pwp-heading {
-  float:left;
-}
-
-.pwp-progress-bar,
-.pwp-time {
-  display:inline-block;
-  background: $black;
-}
-
-.pwp-time {
-  width: 54px;
-  height: 14px;
-  padding: 8px 20px;
-  font-size: $font-size * 0.8;
-}
-
-.pwp-progress-bar {
-  width: 400px;
-  background: black;
-  height: 30px;
-}
-
-.pwp-controls {
-  clear:left;
-  font-size: 1.05em;
-}
-
-.pwp-time-controls,
-.pwp-meta-controls {
-  list-style-type: none;
-  margin: 8px 16px;
-  /*
-  -webkit-margin-before: 0;
-  -moz-margin-before: 0;
-  -webkit-margin-after: 0;
-  -moz-margin-after: 0;
-  -webkit-margin-start: 0;
-  -moz-margin-start: 0;
-  -webkit-margin-end: 0;
-  -moz-margin-end: 0;
-  */
-  -webkit-padding-start: 0;
-  -moz-padding-start: 0;
-  li {
-    margin: 0;
-    float:left;
-  }
-}
-
-.pwp-time-controls {
-  float:right;
-}
-
-.pwp-meta-controls {
-  float:left;
-}
-
+@import "player.scss";
+@import "chapters.scss";
+@import "sharing.scss";
+@import "info.scss";
 
 /*
  --------------------------------------------------------
