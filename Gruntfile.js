@@ -3,6 +3,16 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        jshint: {
+            all: ['Gruntfile.js', 'podlove-web-player/**/*.js'],
+            options: {
+                ignores: [
+                    'podlove-web-player/libs/jquery-1.9.1.min.js',
+                    'podlove-web-player/libs/jquery.ba-hashchange.min.js',
+                    'podlove-web-player/libs/html5shiv.js'
+                ]
+            }
+        },
         uglify: {
             options: {
                 banner: '/*! ==========================================\n' +
@@ -18,6 +28,17 @@ module.exports = function(grunt) {
                 dest: 'build/<%= pkg.name %>.min.js'
             }
         },
+        sass: {                              // Task
+            dist: {                            // Target
+                options: {                       // Target options
+                    style: 'expanded'
+                },
+                files: {
+                    "build/css/podlove-web-player.css": "podlove-web-player/css/podlove-web-player.scss"
+                }
+            }
+        }
+        /*
         less: {
             development: {
                 options: {
@@ -37,25 +58,15 @@ module.exports = function(grunt) {
                 }
             }
         },
-        jshint: {
-            all: ['Gruntfile.js', 'podlove-web-player/**/*.js'],
-            options: {
-                ignores: [
-                    'podlove-web-player/libs/jquery-1.9.1.min.js',
-                    'podlove-web-player/libs/jquery.ba-hashchange.min.js',
-                    'podlove-web-player/libs/html5shiv.js'
-                ]
-            }
-        }
+        */
     });
 
     // Load the plugin that provides the "uglify" task.
-    grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-// grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
     // Default task(s).
-    grunt.registerTask('build', ['jshint', 'less', 'uglify']);
+    grunt.registerTask('build', ['jshint', 'sass', 'uglify']);
     grunt.registerTask('default', ['uglify']);
 };

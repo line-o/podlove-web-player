@@ -221,7 +221,7 @@
 		}
 
 		//prepare row data
-		var tempchapters = params.chapters;
+		var  tempchapters = params.chapters;
 		var maxchapterstart = 0;
 
 		//first round: kill empty rows and build structured object
@@ -961,7 +961,7 @@
 				} else if (document.webkitHidden !== undefined) {
 					hiddenTab = document.webkitHidden;
 				}
-				
+
 				if(hiddenTab === true) {
 					$(player).attr({
 						preload: 'auto'

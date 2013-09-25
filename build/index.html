@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>new Podlove-Webplayer Mockup</title>
+    <link rel="stylesheet" href="/css/podlove-web-player.css">
+</head>
+<body>
+
+<section id="pwp-player1" class="pwp-player">
+
+    <audio data-pwp="default">
+        <source src="/samples/podlove-test-track.mp4" type="audio/mp4" />
+        <source src="/samples/podlove-test-track.mp3" type="audio/mpeg" />
+        <source src="/samples/podlove-test-track.ogg" type="audio/ogg; codecs=vorbis" />
+        <source src="/samples/podlove-test-track.opus" type="audio/ogg; codecs=opus" />
+    </audio>
+
+    <img class="pwp-logo" src="/samples/coverimage.png">
+    <header class="pwp-heading">
+        <h1>SZ003 Bits werden aus Strom geschmiedet. Und Mate</h1>
+        <h2>Der dritte Tag aus dem Sendezentrum.</h2>
+    </header>
+    <p class="pwp-button pwp-button-big pwp-play"></p>
+
+    <div class="pwp-controls">
+        <time class="pwp-time pwp-current-time">00:00:00</time>
+        <canvas class="pwp-progress-bar"></canvas>
+        <time class="pwp-time pwp-total-time">00:10:10</time>
+    </div>
+
+    <div class="pwp-controls">
+        <ul class="pwp-meta-controls">
+            <li class="pwp-button pwp-open-info pwp-icon-info-circle"></li>
+            <li class="pwp-button pwp-open-chapters pwp-icon-list-bullet"></li>
+            <li class="pwp-button pwp-open-speakers pwp-icon-user"></li>
+            <li class="pwp-button pwp-open-volume pwp-icon-volume-up"></li>
+            <li class="pwp-button pwp-open-sharing pwp-icon-export"></li>
+        </ul>
+        <ul class="pwp-time-controls">
+            <li class="pwp-button pwp-chapter-back pwp-icon-to-start"></li>
+            <li class="pwp-button pwp-hop-back pwp-icon-fast-bw"></li>
+            <li class="pwp-button pwp-hop-forward pwp-icon-fast-fw"></li>
+            <li class="pwp-button pwp-chapter-forward pwp-icon-to-end"></li>
+        </ul>
+    </div>
+    <div class="pwp-info">
+    </div>
+    <div class="pwp-chapters">
+    </div>
+    <div class="pwp-speakers">
+    </div>
+    <div class="pwp-volume">
+    </div>
+    <div class="pwp-sharing">
+    </div>
+</section>
+<script src="/js/podlove-web-player.min.js"></script>
+</body>
+</html>
