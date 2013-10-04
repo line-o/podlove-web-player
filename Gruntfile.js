@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     var pwpBanner = '/*! ==========================================\n' +
         ' * <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n' +
@@ -14,6 +14,7 @@ module.exports = function(grunt) {
         jshint: {
             all: ['Gruntfile.js', 'js/*.js'],
             options: {
+                jshintrc: '.jshintrc',
                 ignores: [
                     'js/podlove-web-player.min.js',
                     'js/lib/hashchange.min.js',
@@ -54,7 +55,7 @@ module.exports = function(grunt) {
         },
         watch: {
             options: {
-                dateFormat: function(time) {
+                dateFormat: function (time) {
                     grunt.log.writeln('The watch finished in ' + time + 'ms at' + (new Date()).toString());
                     grunt.log.writeln('Waiting for more changes...');
                 },
