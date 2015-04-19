@@ -231,6 +231,7 @@ Chapters.prototype.getActiveChapter = function () {
 /**
  *
  * @param {number} chapterIndex
+ * @returns {number}
  */
 Chapters.prototype.setCurrentChapter = function (chapterIndex) {
   if (chapterIndex < this.chapters.length && chapterIndex >= 0) {
@@ -238,6 +239,7 @@ Chapters.prototype.setCurrentChapter = function (chapterIndex) {
   }
   this.markActiveChapter();
   console.log('Chapters', 'setCurrentChapter', 'to', this.currentChapter);
+  return this.currentChapter;
 };
 
 Chapters.prototype.markActiveChapter = function () {
@@ -251,8 +253,10 @@ Chapters.prototype.markActiveChapter = function () {
 Chapters.prototype.next = function () {
   var current = this.currentChapter,
     next = this.setCurrentChapter(current + 1);
+  console.log('Chapters', 'next', 'current === next', current, next);
   if (current === next) {
     console.log('Chapters', 'next', 'already in last chapter');
+    this.timeline.setTime(this.timeline.player.duration);
     return current;
   }
   console.log('Chapters', 'next', 'chapter', this.currentChapter);
@@ -261,8 +265,13 @@ Chapters.prototype.next = function () {
 };
 
 Chapters.prototype.previous = function () {
-  var current = this.currentChapter,
-    previous = this.setCurrentChapter(current - 1);
+  var current = this.currentChapter;
+  var tmp = current;
+  if (this.timeline.getTime() !== this.timeline.duration) {
+    console.debug('Chapters', 'previous', 'daslkfahsdlkfah');
+    tmp--;
+  }
+  var previous = this.setCurrentChapter(tmp);
   if (current === previous) {
     console.debug('Chapters', 'previous', 'already in first chapter');
     this.playCurrentChapter();
